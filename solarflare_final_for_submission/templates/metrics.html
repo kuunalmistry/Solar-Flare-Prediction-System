@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="neon">Model Performance Dashboard</h2>
+<div class="card p-3 model-panel">
+  <p class="neon-small">Below are the evaluation metrics loaded from metrics.json.</p>
+</div>
+<div class="mt-4">
+  {% if metrics and metrics.metrics %}
+    {% for model, m in metrics.metrics.items() %}
+      <div class="model-panel mb-4 p-3">
+        <h4 class="model-title">{{ model }}</h4>
+        <p style="color:#d8f2ff;"><strong>Accuracy:</strong> {{ m.accuracy }}</p>
+        <p style="color:#d8f2ff;"><strong>Precision:</strong> {{ m.precision }}</p>
+        <p style="color:#d8f2ff;"><strong>Recall:</strong> {{ m.recall }}</p>
+        <p style="color:#d8f2ff;"><strong>F1 Score:</strong> {{ m.f1 }}</p>
+      </div>
+    {% endfor %}
+  {% else %}
+    <div class="card p-3">Metrics not found.</div>
+  {% endif %}
+</div>
+{% endblock %}

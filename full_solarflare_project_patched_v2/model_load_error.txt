@@ -1,0 +1,926 @@
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "c:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "c:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "c:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "c:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "c:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1759, in load_build
+    setstate(state)
+    ~~~~~~~~^^^^^^^
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1542, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\\\Users\\\\HP\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp313-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "c:\Users\HP\Documents\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1255, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1580, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1623, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 326, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+                         .format(name, top)) from None
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp313-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+          ^^^^^^^^^^
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1213, in load
+    dispatch[key[0]](self)
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1718, in load_build
+    setstate(state)
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1549, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'c:\\\\Users\\\\hp\\\\OneDrive\\\\Desktop\\\\Solar Flare\\\\full_solarflare_project_patched_v2\\\\.venv\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp311-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+          ^^^^^^^^^^
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1213, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1538, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1582, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 331, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'c:\\Users\\hp\\OneDrive\\Desktop\\Solar Flare\\full_solarflare_project_patched_v2\\.venv\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp311-win_amd64.pyd'>
+
+-----
+rf_model.joblib load failure:
+Failed to load rf_model.joblib: ValueError("node array from the pickle has an incompatible dtype:\n- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}\n- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]")
+Traceback (most recent call last):
+  File "C:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 43, in __init__
+    self.model = joblib.load(rf_path)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+          ^^^^^^^^^^
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1213, in load
+    dispatch[key[0]](self)
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 446, in load_build
+    Unpickler.load_build(self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1718, in load_build
+    setstate(state)
+  File "sklearn/tree/_tree.pyx", line 836, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1549, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+-----
+hgb_model.joblib load failure:
+Failed to load hgb_model.joblib: AttributeError("Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'c:\\\\Users\\\\hp\\\\OneDrive\\\\Desktop\\\\Solar Flare\\\\full_solarflare_project_patched_v2\\\\.venv\\\\Lib\\\\site-packages\\\\sklearn\\\\_loss\\\\_loss.cp311-win_amd64.pyd'>")
+Traceback (most recent call last):
+  File "C:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\model_service.py", line 53, in __init__
+    self.model = joblib.load(hgb_path)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+          ^^^^^^^^^^
+  File "c:\Users\hp\OneDrive\Desktop\Solar Flare\full_solarflare_project_patched_v2\.venv\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1213, in load
+    dispatch[key[0]](self)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1538, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 1582, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pickle.py", line 331, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+AttributeError: Can't get attribute '__pyx_unpickle_CyHalfBinomialLoss' on <module 'sklearn._loss._loss' from 'c:\\Users\\hp\\OneDrive\\Desktop\\Solar Flare\\full_solarflare_project_patched_v2\\.venv\\Lib\\site-packages\\sklearn\\_loss\\_loss.cp311-win_amd64.pyd'>
+

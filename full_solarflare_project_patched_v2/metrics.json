@@ -1,0 +1,74 @@
+{
+  "dataset": "/mnt/data/dataset_files/solar_flares.csv",
+  "target": "event_type",
+  "class_names": [
+    "Solar Flare"
+  ],
+  "split_method": "time_split on begin_time",
+  "metrics": {
+    "RandomForest": {
+      "accuracy": 1.0,
+      "f1_weighted": 1.0,
+      "precision_weighted": 1.0,
+      "recall_weighted": 1.0,
+      "classification_report": {
+        "Solar Flare": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240
+        }
+      },
+      "confusion_matrix": [
+        [
+          240
+        ]
+      ]
+    },
+    "HistGB": {
+      "accuracy": 1.0,
+      "f1_weighted": 1.0,
+      "precision_weighted": 1.0,
+      "recall_weighted": 1.0,
+      "classification_report": {
+        "Solar Flare": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240
+        }
+      },
+      "confusion_matrix": [
+        [
+          240
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "dataset_info": {
+    "title": "NASA CME Events - 2 Year Dataset",
+    "description": "Comprehensive 2-year collection of Coronal Mass Ejection events from NASA DONKI API",
+    "source": "NASA DONKI (Database of Notifications, Knowledge, Information)",
+    "collection_date": "2025-07-15T15:55:58.828768",
+    "total_events": 2851,
+    "date_range": "2023-07-26 11:12:00+00:00 to 2025-07-14 19:38:00+00:00",
+    "years_covered": [
+      2023,
+      2024,
+      2025
+    ]
+  },
+  "speed_statistics": {
+    "categories": {
+      "slow": 276,
+      "normal": 1130,
+      "fast": 1225,
+      "very_fast": 209,
+      "extreme": 11,
+      "unknown": 0
+    },
+    "average_speed_kmh": 571.3679410733076,
+    "max_speed_kmh": 3529.0,
+    "min_speed_kmh": 188.0
+  },
+  "temporal_analysis": {
+    "yearly_counts": {
+      "2023": 504,
+      "2024": 1519,
+      "2025": 828
+    },
+    "monthly_counts": {
+      "1": 253,
+      "2": 210,
+      "3": 210,
+      "4": 251,
+      "5": 283,
+      "6": 262,
+      "7": 181,
+      "8": 231,
+      "9": 203,
+      "10": 242,
+      "11": 237,
+      "12": 288
+    },
+    "quarterly_counts": {
+      "1": 673,
+      "2": 796,
+      "3": 615,
+      "4": 767
+    }
+  },
+  "geoeffectiveness": {
+    "potentially_geoeffective": 456,
+    "fast_cmes": 1439,
+    "wide_angle_cmes": 0
+  }
+}

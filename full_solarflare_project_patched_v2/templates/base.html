@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Solar Flare ML Website</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+ <div class="container">
+   <a class="navbar-brand" href="/">SolarFlare ML</a>
+   <div class="navbar-nav">
+     <a class="nav-link" href="/report">Report</a>
+     <a class="nav-link" href="/eda">EDA</a>
+     <a class="nav-link" href="/models">Models</a>
+     <a class="nav-link" href="/predict">Predict</a>
+   </div>
+ </div>
+</nav>
+
+<div class="container py-4">
+{% block content %}{% endblock %}
+</div>
+</body>
+</html>

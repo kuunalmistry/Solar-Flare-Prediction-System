@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="neon">ML Pipeline</h2>
+<div class="model-panel p-3">
+  <p class="neon-small">This page describes the preprocessing and model pipeline used in training.</p>
+  <h4 class="model-title">Preprocessing Steps</h4>
+  <ul style="color:#d8f2ff;">
+    <li>Missing value imputation</li>
+    <li>Scaling via StandardScaler</li>
+    <li>Encoding categorical features using OneHotEncoder</li>
+    <li>Feature selection based on domain understanding</li>
+  </ul>
+  <h4 class="model-title">Model Algorithms</h4>
+  <ul style="color:#d8f2ff;">
+    <li>Random Forest Classifier</li>
+    <li>Histogram Gradient Boosting Classifier</li>
+  </ul>
+</div>
+{% endblock %}

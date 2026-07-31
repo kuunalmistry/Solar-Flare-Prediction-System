@@ -1,0 +1,14 @@
+{
+  "dataset_name": "NASA Space Weather Events",
+  "description": "Comprehensive collection of solar flares, CME events, geomagnetic storms, and high-speed solar wind streams",
+  "source": "NASA DONKI API",
+  "collection_date": "2025-07-10T13:23:38.429036",
+  "total_events": 1743,
+  "date_range": "2023-07-11 14:19:00+00:00 to 2025-07-09 04:10:00+00:00",
+  "event_types": {
+    "solar_flares": 1599,
+    "cme_events": 0,
+    "geomagnetic_storms": 41,
+    "high_speed_streams": 103
+  }
+}

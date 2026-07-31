@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>Exploratory Data Analysis</h2>
+<p>This page contains richer visual analysis produced from the dataset: class distribution, temporal trends, numeric histograms, correlation heatmap, and boxplots. Each figure includes a short caption explaining the insight.</p>
+
+<div class="row">
+  {% for p in plots %}
+  <div class="col-md-6 mb-4">
+    <div class="card shadow-sm">
+      <img src="{{ p }}" class="card-img-top" style="max-height:360px; object-fit:contain;">
+      <div class="card-body">
+        <p class="card-text">Figure: {{ p.split('/')[-1] }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<hr>
+<h4>Notes</h4>
+<ul>
+  <li>Class distribution helps identify imbalance — consider stratified sampling or class weights during training.</li>
+  <li>Temporal trends show when events cluster and help design time-based validation splits.</li>
+  <li>Correlations and boxplots help identify predictive numeric features and outliers.</li>
+</ul>
+{% endblock %}
+
+<div class="model-panel p-3 mt-4">
+  <h4 class="model-title">Interpretation</h4>
+  <p style="color:#d8f2ff;">These visualizations represent the distribution of solar flare classes, monthly flare activity, 
+  and feature importances based on the trained models. They match the explanations provided in the report.</p>
+</div>

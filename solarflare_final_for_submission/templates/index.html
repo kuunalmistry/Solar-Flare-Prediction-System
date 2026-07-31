@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h1>Solar Flare Forecasting — ML Project</h1>
+<p>This web demo includes the full project report, EDA, trained models, and a prediction API. Use the navigation to explore.</p>
+
+<div class="row">
+  <div class="col-md-8">
+    <h4>Project summary (from report)</h4>
+    <p>TEAM KRMA</p><p>-MEGH BARI, AAYUSHI PUROHIT, RUCHITA WAGH, MANVITH RAI, KUUNAL MISTRY</p><p>Minor Project Submission: Machine Learning</p><p>A. Project Reorientation & Revised Plan</p><p>Refined Problem Statement</p><p>Solar flares are sudden bursts of electromagnetic radiation from the Sun that can severely disrupt satellite communications, GPS, aviation, and power grids. Current forecasting relies heavily on manual expert analysis, which is time-consuming, subjective, and reactive. Goal: Develop a machine learning model that automatically predicts solar flares (binary and multi-class), using NASA and NOAA solar activity data, to enable faster and more reliable early warnings.</p>
+  </div>
+  <div class="col-md-4">
+    <div class="card p-3 shadow-sm">
+      <h5>Quick facts</h5>
+      <ul>
+        <li>Dataset: solar flares events catalog</li>
+        <li>Models trained: RandomForest, HistGradientBoosting</li>
+        <li>Prediction: flare class / event severity</li>
+      </ul>
+      <a class="btn btn-primary mt-2" href="/report">Read full report</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

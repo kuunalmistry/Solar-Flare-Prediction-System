@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    .space-card {
+        background: rgba(20, 20, 40, 0.75);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0px 8px 30px rgba(0,0,0,0.4);
+        color: #d8e7ff;
+    }
+    .space-title {
+        font-family: 'Orbitron', sans-serif;
+        letter-spacing: 1px;
+        color: #82d2ff;
+        text-shadow: 0px 0px 10px rgba(0,150,255,0.7);
+    }
+    .space-input {
+        background: rgba(255,255,255,0.08);
+        color: white;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+</style>
+
+<h2 class="space-title mb-4">🔮 Solar Flare Future Prediction</h2>
+
+<div class="space-card mb-4">
+
+    <h4>Select Date for Prediction</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <label class="form-label">Year</label>
+            <input type="number" id="predYear" min="1996" max="2050" class="form-control space-input" value="2026">
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">Month</label>
+            <select id="predMonth" class="form-control space-input">
+                <option value="1">January</option><option value="2">February</option>
+                <option value="3">March</option><option value="4">April</option>
+                <option value="5">May</option><option value="6">June</option>
+                <option value="7">July</option><option value="8">August</option>
+                <option value="9">September</option><option value="10">October</option>
+                <option value="11">November</option><option value="12">December</option>
+            </select>
+        </div>
+    </div>
+
+    <button class="btn btn-primary mt-3" onclick="futurePredict()">🔮 Predict</button>
+
+    <div id="futureResult" class="mt-3"></div>
+</div>
+
+<hr class="my-4">
+
+<h3 class="space-title">📤 Upload CSV for Batch Predictions</h3>
+<div class="space-card">
+  <div id="statusArea" class="mb-2 text-warning"></div>
+    <form id="csvForm" enctype="multipart/form-data">
+        <input type="file" name="file" class="form-control mb-3">
+        <button class="btn btn-warning" type="submit">Upload & Predict</button>
+    </form>
+    <div id="csvResult" class="mt-3"></div>
+</div>
+
+<script>
+async function futurePredict(){
+    const year = document.getElementById("predYear").value;
+    const month = document.getElementById("predMonth").value;
+
+    const res = await fetch("/api/predict-future", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({year, month})
+    });
+    const out = await res.json();
+
+    let html = `
+        <h4 class="mt-3">📡 Prediction for ${month}/${year}</h4>
+        <p><b>Predicted Flare Class:</b> ${out.prediction}</p>
+        <h5>Class Probabilities:</h5>
+    `;
+
+    html += `<ul>`;
+    for(let i=0;i<out.classes.length;i++){
+        html += `<li>${out.classes[i]}: ${(out.probabilities[i]*100).toFixed(2)}%</li>`;
+    }
+    html += `</ul>`;
+
+    if(out.top_features && out.top_features.length>0){
+        html += "<h5>Top contributing features:</h5><ul>";
+        out.top_features.forEach(tf=>{
+            html += `<li>${tf.feature} — importance: ${tf.importance.toFixed(4)}</li>`;
+        });
+        html += "</ul>";
+    }
+
+    document.getElementById("futureResult").innerHTML = html;
+}
+
+document.getElementById("csvForm").addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    const file = e.target.file.files[0];
+    const fd = new FormData();
+    fd.append("file", file);
+    const res = await fetch("/api/predict-csv", {method:"POST", body: fd});
+    const txt = await res.text();
+
+    const blob = new Blob([txt], {type:"text/csv"});
+    const url = URL.createObjectURL(blob);
+
+    document.getElementById("csvResult").innerHTML =
+        `<a href="${url}" download="predictions.csv" class="btn btn-success">Download Predictions</a>`;
+});
+
+
+// load model status
+async function loadModelStatus(){
+  const sa = document.getElementById('statusArea');
+  try{
+    const r = await fetch('/api/model-status');
+    if(!r.ok){ sa.innerText = 'Model status check failed'; return; }
+    const s = await r.json();
+    if(s.model_loaded){
+      sa.innerText = 'Model loaded: ' + (s.model_type || 'unknown');
+      sa.className = 'mb-2 text-success';
+    } else {
+      sa.innerText = 'Model not loaded (using fallback). See model_load_error.txt for details.';
+      sa.className = 'mb-2 text-danger';
+    }
+  }catch(e){
+    sa.innerText = 'Status check error: ' + e.message;
+    sa.className = 'mb-2 text-danger';
+  }
+}
+loadModelStatus();
+</script>
+
+{% endblock %}

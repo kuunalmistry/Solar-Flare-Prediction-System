@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="space-title">⬇ Downloads</h2>
+<div class="space-card">
+    <ul style="font-size: 18px;">
+        <li><a href="{{ url_for('download_report', filename='Report (2).docx') }}">Download Full Report</a></li>
+        <li><a href="{{ url_for('download_model', filename='preprocessor.joblib') }}">Preprocessor</a></li>
+        <li><a href="{{ url_for('download_model', filename='rf_model.joblib') }}">Random Forest Model</a></li>
+        <li><a href="{{ url_for('download_model', filename='hgb_model.joblib') }}">Gradient Boosting Model</a></li>
+    </ul>
+</div>
+{% endblock %}

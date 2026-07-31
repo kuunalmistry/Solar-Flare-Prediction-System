@@ -1,0 +1,8 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>Project Report: {{ report_name }}</h2>
+<div class="card p-3">
+{{ report_html|safe }}
+</div>
+{% endblock %}

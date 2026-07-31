@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    background: radial-gradient(circle, #0b0f29, #070922, #030414);
+    font-family: Poppins, sans-serif;
+    color: #d9e6ff;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 60px;
+}
+
+.navbar {
+    background: rgba(5,10,40,0.95);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.nav-link, .navbar-brand {
+    color: #8acedf !important;
+}
+
+.card {
+    background: rgba(15, 20, 40, 0.6);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.space-card {
+    background: rgba(20, 20, 40, 0.75);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 8px 30px rgba(0,0,0,0.4);
+    color: #d8e7ff;
+}
+.space-title { font-family: 'Orbitron', sans-serif; color:#82d2ff; }
+
+.btn-primary {
+    background: linear-gradient(90deg,#4b7bd3,#7bd3ff);
+    border: none;
+    color: #04122b;
+    font-weight: 600;
+}
+.btn-warning {
+    background: linear-gradient(90deg,#ffd166,#ff9a3c);
+    border: none;
+    color: #231f13;
+    font-weight: 700;
+}
+
+
+
+/* Restorative UI tweaks to ensure neon and light text on dark cards */
+.card, .space-card, .card p, .card h5, .card h4, .card h3, .card a {
+  color: #e6f4ff !important;
+}
+.card .btn, .card a.btn {
+  color: #04122b !important;
+  background: linear-gradient(90deg,#4b7bd3,#7bd3ff);
+  border: none;
+  font-weight: 700;
+}
+.neon{color:#7bd3ff; text-shadow: 0 0 14px rgba(123,211,255,0.28); font-weight:700;}
+.neon-small{color:#95e4ff; text-shadow: 0 0 8px rgba(149,228,255,0.18); font-weight:600;}
+.card.bg-dark, .card.bg-dark p { color: #e6f4ff !important; }
+.model-panel { background: linear-gradient(180deg, rgba(10,14,30,0.6), rgba(6,9,20,0.6)); border-radius:10px; padding:18px; border:1px solid rgba(255,255,255,0.04); box-shadow: 0 6px 24px rgba(0,0,0,0.6); }
+.model-title { font-family: 'Orbitron', sans-serif; color: #7bd3ff; margin-bottom:8px; }
+.team-role { color: #9fdcff; font-weight:600; }
+.team-name { color: #e6f4ff; font-weight:700; }
