@@ -1,4 +1,4 @@
-☀️ Solar Flare Prediction
+☀️ Solar Flare Prediction System
 
 A machine learning project that predicts the occurrence and intensity of solar flares using historical solar activity data. The objective is to assist in space weather forecasting by identifying patterns that can indicate future solar flare events, enabling earlier awareness of potential impacts on satellites, communication systems, GPS navigation, and power infrastructure.
 
