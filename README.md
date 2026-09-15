@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>☀️ Solar Flare Prediction System</h1>
+<h1>☀️ Solar Flare Prediction System </h1>
 
 <h3>Machine Learning for Solar Flare Occurrence &amp; Intensity Prediction</h3>
 
