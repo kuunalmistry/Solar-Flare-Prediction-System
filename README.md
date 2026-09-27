@@ -4,7 +4,6 @@
 
 <h3>Machine Learning for Solar Flare Occurrence &amp; Intensity Prediction</h3>
 
-
 <p>
 <strong>
 A Machine Learning system for analyzing historical solar activity
